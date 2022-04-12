@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar_weather {
+    margin-bottom: 20px;
+}
+
+#navbar_weather_index {
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+form {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#input_city {
+    width: 65%;
+    display: inline;
+    border: 2px solid rgb(74, 74, 74);
+    border-radius: 0px;
+    margin-top: 25px;
+}
+
+#input_city_index {
+    width: 65%;
+    display: inline;
+    border: 2px solid rgb(74, 74, 74);
+    border-radius: 0px;
+}
+
+button {
+    border: none;
+    padding: 8px;
+    width: 25%;
+    background-color: rgb(74, 74, 74);
+    color: white;
+}
+
+
+/* Cloudy */
+
+#cloudy {
+    background-image: linear-gradient(to bottom right, rgb(211, 211, 211), rgb(74, 74, 74));
+    width: 90%;
+    border-radius: 20px;
+    height: 60vh;
+    position: relative;
+    color: white;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+
+/* Sunny  */
+
+#sunny {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(115, 235, 255, 1) 19%, rgba(17, 160, 189, 1) 100%);
+    width: 90%;
+    border-radius: 20px;
+    height: 60vh;
+    position: relative;
+    color: white;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#top_cont>img {
+    width: 75%;
+    margin: 0 auto;
+}
+
+#top_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+}
+
+#top_cont>h2 {
+    margin-top: 25px;
+}
+
+#temp {
+    position: absolute;
+    display: inline;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    font-size: 40px;
+}
+
+#extras_cont {
+    position: absolute;
+    display: inline;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#extras_cont>ol>h3>#humid {
+    width: 10%;
+}
+
+#extras_cont>ol>h3>img {
+    width: 15%;
+}
