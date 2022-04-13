@@ -1,5 +1,5 @@
-This weather app was created so I could practice using Django and importing API'S. Using HTML, Bootstrap/CSS, and Django i was able to complete this project.
-The API used in this project is from https://openweathermap.org/api.
+This weather app was created so I could practice importing API'S using Django. Using HTML, Bootstrap/CSS, and Django i was able to complete this project.
+The API used in this project is from https://openweathermap.org/api. Which is a website that tracks current weather conditions from most places in the world.
 
 COMING SOON: www.gagelieble.com/weather
 
