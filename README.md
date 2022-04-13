@@ -5,7 +5,7 @@ COMING SOON: www.gagelieble.com/weather
 
 HOW TO RUN LOCALLY:
 
-DJANGO: You must be in the file directory that contains 'manage.py' inorder to run this project locally. The 'portfolio_proj', 'portfolio_app', 'templates', and static files must also be present in this directory. After installing django on your machine you can enter the following into your terminal.
+DJANGO: You must be in the file directory that contains 'manage.py' inorder to run this project locally. The 'weather_proj', 'weather_app', 'templates', and static files must also be present in this directory. After installing django on your machine you can enter the following into your terminal.
 
 WINDOWS: py -m manage runserver
 MAC: manage.py runserver
