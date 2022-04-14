@@ -1,7 +1,36 @@
 body {
+    height: 100vh;
+}
+
+.web_desc {
+    color: white;
+    text-align: center;
+}
+
+.web_desc>a {
+    color: white
+}
+
+#sunnyn_body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: linear-gradient(to bottom left, rgba(255, 255, 255, 85%) 0%, rgba(0, 0, 0, 85%) 0%, rgba(92, 92, 92, 85%) 0%, rgba(57, 57, 57, 85%) 25%, rgba(0, 0, 0, 85%) 100%);
+}
+
+#sunny_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom left, rgba(255, 255, 255, 0.85) 0%, rgba(182, 226, 255, 0.85) 0%, rgba(178, 234, 255, 0.85) 0%, rgba(115, 235, 255, 85%) 19%, rgba(17, 160, 189, 85%) 100%);
+}
+
+#cloudy_body {
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom left, rgb(211, 211, 211, 85%), rgb(74, 74, 74, 85%));
 }
 
 #navbar_weather {
@@ -16,39 +45,53 @@ body {
 form {
     margin-top: 25px;
     margin-bottom: 25px;
+    width: 95%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
 }
 
 #input_city {
     width: 65%;
     display: inline;
-    border: 2px solid rgb(74, 74, 74);
-    border-radius: 0px;
+    border: 2px solid white;
+    border-radius: 100px;
     margin-top: 25px;
 }
 
 #input_city_index {
     width: 65%;
     display: inline;
-    border: 2px solid rgb(74, 74, 74);
-    border-radius: 0px;
+    border: 2px solid white;
+    border-radius: 100px;
 }
 
-button {
+.button_index {
     border: none;
     padding: 8px;
     width: 25%;
-    background-color: rgb(74, 74, 74);
-    color: white;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.button_result {
+    border: none;
+    padding: 8px;
+    width: 25%;
+    background-color: white;
+    border-radius: 100px;
 }
 
 
 /* Cloudy */
 
 #cloudy {
+    margin-top: 100px;
     background-image: linear-gradient(to bottom right, rgb(211, 211, 211), rgb(74, 74, 74));
     width: 90%;
     border-radius: 20px;
-    height: 60vh;
+    min-height: 350px;
+    max-height: 500px;
     position: relative;
     color: white;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -58,19 +101,34 @@ button {
 /* Sunny  */
 
 #sunny {
-    background: rgb(255, 255, 255);
+    margin-top: 100px;
     background: linear-gradient(to bottom right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(115, 235, 255, 1) 19%, rgba(17, 160, 189, 1) 100%);
     width: 90%;
     border-radius: 20px;
-    height: 60vh;
+    min-height: 350px;
+    max-height: 500px;
     position: relative;
     color: white;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-#top_cont>img {
-    width: 75%;
+#sunnyn {
+    margin-top: 100px;
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(92, 92, 92, 1) 0%, rgba(57, 57, 57, 1) 25%, rgba(0, 0, 0, 1) 100%);
+    width: 90%;
+    border-radius: 20px;
+    min-height: 350px;
+    max-height: 500px;
+    position: relative;
+    color: white;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#result_icon {
+    width: 60%;
     margin: 0 auto;
+    position: absolute;
+    margin-top: -115px;
 }
 
 #top_cont {
@@ -78,10 +136,11 @@ button {
     flex-direction: column;
     align-items: center;
     padding-top: 25px;
+    position: relative;
 }
 
-#top_cont>h2 {
-    margin-top: 25px;
+.desc_weather {
+    margin-top: 75px;
 }
 
 #temp {
@@ -90,7 +149,14 @@ button {
     bottom: 0;
     right: 0;
     margin: 20px;
+}
+
+#temp>h2 {
     font-size: 40px;
+}
+
+#temp>h3 {
+    text-align: center;
 }
 
 #extras_cont {
@@ -102,10 +168,80 @@ button {
     align-items: center;
 }
 
-#extras_cont>ol>h3>#humid {
-    width: 10%;
+
+/* @media screen and (min-width: 280px) {
+    #result_icon {
+        width: 90%;
+    }
 }
 
-#extras_cont>ol>h3>img {
-    width: 15%;
+@media screen and (min-width: 412px) {
+    #result_icon {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    #result_icon {
+        width: 45%;
+    }
+} */
+
+@media screen and (min-width: 768px) {
+    #sunny {
+        min-height: 60vh;
+        max-height: 100vh;
+    }
+    #sunnyn {
+        min-height: 60vh;
+        max-height: 100vh;
+    }
+    #cloudy {
+        min-height: 60vh;
+        max-height: 100vh;
+    }
+    .desc_weather {
+        margin-top: 250px;
+        font-size: 50px;
+    }
+    #temp>h2 {
+        font-size: 60px;
+    }
+    #temp>h3 {
+        text-align: center;
+        font-size: 30px;
+    }
+    #extras_cont>ol>h3 {
+        font-size: 35px;
+    }
+    #input_city {
+        height: 55px;
+    }
+    .button_result {
+        height: 55px;
+    }
+    a>img {
+        width: 75px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #sunny {
+        min-height: 60vh;
+        max-height: 100vh;
+        max-width: 600px;
+    }
+    #sunnyn {
+        min-height: 60vh;
+        max-height: 100vh;
+        max-width: 600px;
+    }
+    #cloudy {
+        min-height: 60vh;
+        max-height: 100vh;
+        max-width: 600px;
+    }
+    form {
+        width: 650px;
+    }
 }

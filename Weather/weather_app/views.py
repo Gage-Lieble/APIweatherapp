@@ -1,11 +1,15 @@
 from django.shortcuts import render
 import urllib.request
 import json
+import random
 
 # Create your views here.
 def index(request):
-    
-    return render(request, "weather_app/index.html")
+        bg_options = ["sunny", "sunnyn", "cloudy"]
+        index_bg = random.choice(bg_options)
+        context = {"indexbg": str(index_bg)}
+
+        return render(request, "weather_app/index.html", context)
 
 def result(request):
 
@@ -23,11 +27,21 @@ def result(request):
             "description": str(data_list['weather'][0]['description']),
             "icon": data_list['weather'][0]['icon'],
             "city": city.title(),
-            "color": ""
+            "color": "",
+            "time": "",
+            
         }
-        print(type(context["description"]))
-        if "clear sky" == context["description"]:
+
+        if "clear sky" == context["description"] and "n" in context["icon"]:
+            context["color"] = "sunnyn"
+            context["time"] = "pm"
+        elif "clear sky" == context["description"] and "d" in context["icon"]:
             context["color"] = "sunny"
+            context["time"] = "am"
+        elif "n" in context["icon"]:
+            context["time"] = "pm"
+            context["color"] = "cloudy"
         else:
+            context["time"] = "am"
             context["color"] = "cloudy"
     return render(request, "weather_app/result.html", context)
