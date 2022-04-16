@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="icon" href="{% static '/images/favicon.svg' %}">
-    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="icon" href="{% static 'weather_app/images/favicon.svg' %}">
+    <link rel="stylesheet" href="{% static 'weather_app/css/style.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
@@ -18,7 +18,7 @@
     <nav id="navbar_weather" class="navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'weather:index' %}">
-                <img src="{% static '/images/GICON.svg' %}" alt="" width="50">
+                <img src="{% static 'weather_app/images/GICON.svg' %}" alt="" width="50">
             </a>
 
         </div>
@@ -29,13 +29,12 @@
     <div id="{{color}}">
         <div id="top_cont">
 
-            <img id="result_icon" src="{% static 'images/' %}{{icon}}.svg" alt="{{icon}} weather icon">
+            <img id="result_icon" src="{% static 'weather_app/images/' %}{{icon}}.svg" alt="{{icon}} weather icon">
 
             <h2 class="desc_weather">{{description}}</h2>
             <h5 class="city_name">{{city}}, {{country}} </h5>
         </div>
         <div id="temp">
-            <h3>{{time}}</h3>
             <h2>{{temp}}°F </h2>
         </div>
         <div id="extras_cont">
